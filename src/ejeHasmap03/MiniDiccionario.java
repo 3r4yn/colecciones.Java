@@ -8,7 +8,7 @@ public class MiniDiccionario {
 	public static void main(String[] args) {
 		
 		var diccionario = new HashMap <String,String>();
-		
+// olaa
 //10 palabras
 		diccionario.put ("Adios", "bye");
 		diccionario.put ("Hola", "Hello");
