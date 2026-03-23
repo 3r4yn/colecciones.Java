@@ -1,4 +1,4 @@
-package ejeHasmap03;
+package ejeHashmap03;
 
 import java.util.HashMap;
 import java.util.Scanner;
