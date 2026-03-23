@@ -26,6 +26,8 @@ public class Eliza {
 		do {
 			frase = sc.nextLine();
 			boolean encontrada = false;
+			
+//Crear un Array string con otra lista si contiene malas palabras
 			for (String clave: map.keySet()) {
 //touppercase comvierte en mayusculas y comprueba si contiene el texto HOLA
 				if (frase.toUpperCase().contains(clave)) {

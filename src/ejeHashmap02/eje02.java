@@ -1,7 +1,7 @@
 /**
  * Implementa el control de acceso al área restringida de un programa
  */
-package ejeHasmap02;
+package ejeHashmap02;
 
 import java.util.ArrayList;
 import java.util.Collections;
