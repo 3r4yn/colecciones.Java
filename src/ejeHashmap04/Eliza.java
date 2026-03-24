@@ -1,5 +1,6 @@
 package ejeHashmap04;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -16,7 +17,9 @@ public class Eliza {
 		map.put("NOMBRE", "Mi nombre es Eliza");
 		
 		String msgDefault = "Lo siento, no te comprendo";
-
+		String msgBloqueado= "No eres muy educado";
+		
+		var listapalabraBloquear = Arrays.asList("caca","culo","pedo","pis");
 		
 		
 		Scanner sc = new Scanner(System.in);
@@ -25,6 +28,17 @@ public class Eliza {
 		boolean fin=false;
 		do {
 			frase = sc.nextLine();
+//Comprobamos si esta en el map
+			boolean correcto = true;
+			for (String valor:listapalabraBloquear) {
+				if (frase.contains(valor)) {		
+					System.out.println(msgBloqueado + ">"+valor.toUpperCase()+"<");	
+					correcto = false;
+					break;
+				}
+			}
+			
+			if (correcto) {
 			boolean encontrada = false;
 			
 //Crear un Array string con otra lista si contiene malas palabras
@@ -43,6 +57,7 @@ public class Eliza {
 			
 			if(!encontrada) {
 				System.out.println(msgDefault);
+			}
 			}
 			
 		}while( ! fin);
